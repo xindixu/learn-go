@@ -11,24 +11,24 @@ func Hello(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("Empty name")
 	}
-	message := fmt.Sprintf(randomFormat(), name)
-	return message, nil
+	msg := fmt.Sprintf(randomFormat(), name)
+	return msg, nil
 }
 
 func Hellos(names []string) (map[string]string, error) {
 	// make(map[key-type]value-type)
 	// key-value pairs (map) with key as string and value as string
-	messages := make(map[string]string)
+	msgs := make(map[string]string)
 	for _, name := range names {
-		message, err := Hello(name)
+		msg, err := Hello(name)
 
 		if err != nil {
 			return nil, err
 		}
 
-		messages[name] = message
+		msgs[name] = msg
 	}
-	return messages, nil
+	return msgs, nil
 }
 
 // Go executes init functions automatically at program startup, after global variables have been initialized.
