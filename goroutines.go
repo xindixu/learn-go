@@ -21,6 +21,7 @@ func sayP(s *string) {
 func main() {
 	/*
 		NOTE:
+		Goroutine is a function executing concurrently with other goroutines in the same address space.
 		go f(x,y,z)
 		The evaluation of f, x, y, and z happens in the current goroutine and
 		the execution of f happens in the new goroutine.
