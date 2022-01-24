@@ -26,7 +26,8 @@ func main() {
 		v := <-ch  // Receive from ch, and assign value to v.
 
 		Channel sends and receives until the other side is ready
-
+		Receivers always block until there is data to receive
+		Sender blocks until the receiver has received the value
 	*/
 	c := make(chan int)
 
